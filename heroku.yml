@@ -1,7 +1,5 @@
 build:
   docker:
     web: Dockerfile
-
 run:
-  web: |
-    ./memos
+  web: docker run -d -p $PORT:5230 -v ~/.memos/:/var/opt/memos ghcr.io/usememos/memos:latest
